@@ -1,0 +1,112 @@
+extends pug/base
+
+prepend vars
+	//- 
+
+append vars
+	//-
+
+block content
+	//-
+
+	header.header
+		img.header__logo(src="images/logo-min.png", alt="альт")
+		h1
+			| Домашние 
+			br
+			| простые рецепты
+		p.header__p Собирайте рецепты в recipe box
+		a.btn.header__btn(href="#mail")
+			| Присоединиться к сообществу
+
+	.recipe
+		a.recipe__slide(href="#")
+			img.recipe__img(src="images/slide1-min.jpg", alt="альт")
+			p.recipe__p Простые домашние рецепты
+		a.recipe__slide(href="#")
+			img.recipe__img(src="images/slide2-min.jpg", alt="альт")
+			p.recipe__p Статьи о готовке
+		a.recipe__slide(href="#")
+			img.recipe__img(src="images/slide3-min.jpg", alt="альт")
+			p.recipe__p Бесплатная книга рецептов всем подписчикам
+		a.recipe__slide(href="#")
+			img.recipe__img(src="images/slide4-min.jpg", alt="альт")
+			p.recipe__p Собирайте рецепты в recipe box
+		a.recipe__slide(href="#")
+			img.recipe__img(src="images/slide5-min.jpg", alt="альт")
+			p.recipe__p Печать рецептов
+	
+	section
+		h2 Почему круто быть с нами:
+		.cool
+			.cool__slide
+				.cool__img-outer
+					img.cool__img(src="images/slideA-min.jpg", alt="альт")
+				p.cool__p 
+					| Получать лучшие рецепты 
+					br
+					| по разным категориям
+			.cool__slide
+				.cool__img-outer
+					img.cool__img(src="images/slideB-min.jpg", alt="альт")
+				p.cool__p 
+					| Готовить без лишних усилий 
+					br
+					| и делать из каждого дня
+					br
+					| не рутинный
+			.cool__slide
+				.cool__img-outer
+					img.cool__img(src="images/slideC-min.jpg", alt="альт")
+				p.cool__p 
+					| Довольные 
+					br
+					| члены семьи
+				
+	.family
+		p.family__p 
+			| Удобно получать на емейл уникальные проверенные рецепты,
+			br
+			| которые дружная команда Tastycookery попробовала сама и рекомендует
+		a.btn.family__btn(href="#mail") Стать членом семьи Tastycookery
+			span.family__span Бесплатно
+	
+	section.users-reviews
+		h2 Отзывы довольных пользователей
+		.users
+			.users__slide
+				p.users__p После того, как стал участником проекта Tastycookery получает много простых рецептов, о которых раньше не задумывался, стал готовить некоторые, семья рада, стали больше разговаривать во время ужина и хвалить кулинарные таланты Человека1.
+					span.users__triangle
+				.users__person
+					img.users__img(src="images/user1-min.jpg", alt="альт")
+					.users__info
+						span.users__name Дейнерис
+						span.users__age 56 лет
+			.users__slide
+				p.users__p Рад, что благодаря простым рецептам может наслаждаться изысканными блюдами, тратя на приготовление 20 мин в день
+					span.users__triangle
+				.users__person
+					img.users__img(src="images/user2-min.jpg", alt="альт")
+					.users__info
+						span.users__name Тайвин
+						span.users__age 43 лет
+			.users__slide
+				p.users__p Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что полностью отказалась от офисной неполезной еды и за 2 месяца похудела на 3 кг. И очень рекомендует всем использовать рецепты с сайта
+					span.users__triangle
+				.users__person
+					img.users__img(src="images/user3-min.jpg", alt="альт")
+					.users__info
+						span.users__name Серсея
+						span.users__age 56 лет
+	
+	footer
+		.sign
+			p.sign__p Sign up to receive daily manually selected recipes, delicious weekly articles, 3-piece sets of slow cooker, vegetarian, and lunch ideas, plus Quick&Easy recipes and Nutrition Value flashcards via email.
+			form.sign__form(method="post" action="#" id="form")
+				input#mail(type="email" name="mail" placeholder="Enter your email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required)
+				button.btn.sign__btn(type="submit") Sign up
+				p.sign__policy By signing up I agree to the terms of the 
+					a.sign__a(href="#") Privacy Policy
+		.copyright © 2014–2018 TastyCookery.com
+
+					

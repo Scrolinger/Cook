@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-size: 100%;
+}
+body {
+	font-family: $font-family;
+	-webkit-font-smoothing: antialiased;
+	text-decoration-skip: objects;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+button:not([disabled]),
+a[role="button"]:not([disabled]) {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	color: $color-white;
+	font-size: 3.2rem;
+	padding: 0;
+	margin: 75px 0 0;
+	line-height: 4rem;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 20px;
+}
+.btn {
+	display: inline-block;
+	position: relative;
+	margin: 20px 0;
+	padding: 25px 60px 20px;
+	background: linear-gradient(90deg, $bg-btn-from, $bg-btn-to);
+	color: $color-white;
+	font-size: 1.3rem;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 15px -15px 40px rgba(0,0,0,0.5);
+	z-index: 1;
+	transition: color $duration-normal, box-shadow $duration-normal, scale $duration-normal;
+		
+	
+	&:before {
+		content: "";
+		opacity: 0;
+		z-index: -1;
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		bottom: 1px;
+		left: 1px;
+		background: linear-gradient(135deg, $bg-btn-to, $bg-btn-from);
+		border-radius: 10px;
+		transition: opacity $duration-normal;
+	}
+	&:hover {
+		color: $color-dots-active;
+		box-shadow: -0px 0px 50px rgba(0,0,0,0.5);
+		transform: scale(1.005,1.005);
+		transition: color $duration-normal, box-shadow $duration-normal, scale $duration-normal;
+
+		&:before {
+			opacity: 1;
+		}
+	}
+	// &:after {
+	// 	// content: '';
+	// 	position: absolute;
+	// 	top: -80%;
+	// 	left: -20%;
+	// 	height: 210px;
+	// 	width: 520px;
+	// 	background: url(../images/btn-shadow-min.png) center center no-repeat;
+	// 	z-index: -1;
+	// }
+}
+
+button {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.slick-dots {
+	bottom: 0;
+	width: auto;
+	left: 50%;
+	transform: translateX(-50%);
+	li {
+		button {
+			&:before {
+				content: '';
+				height: 10px;
+				width: 10px;
+				background: $color-dots;
+				border-radius: 50%;
+			}
+		}
+	}
+	li.slick-active {
+		button {
+			&:before {
+				opacity: 1;
+				background: $color-dots-active;
+			}
+		}
+	}
+}
+.users {
+	.slick-dots {
+		bottom: -50px;
+	}
+}

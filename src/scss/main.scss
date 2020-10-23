@@ -1,0 +1,338 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+@import "helpers";
+
+body > *{
+    padding: 0 20px;
+}
+@media (min-width: 1240px) {
+  body > * {
+    // padding: 0 calc(50% - 590px);
+    padding: 0 120px;
+  }
+}
+
+.header {
+  padding-top: 60px;
+  padding-bottom: 95px;
+  background: 
+              url(../images/ff-center-front-min.png) right 31% bottom no-repeat,
+              url(../images/cooker-min.png) right 31% top 5% no-repeat,
+              url(../images/ff-center-back-min.png) right 31% bottom no-repeat,
+              url(../images/ff-left-min.png) left top no-repeat,
+              url(../images/ff-right-min.png) right top no-repeat;
+  background-color: $bg-screen;
+  
+  &__p {
+    margin: 15px 0;
+    color: $color-white;
+    font-size: 1.5rem;
+  }
+  &__btn {
+    width: 330px;
+  	font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.recipe {
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  &__slide {
+    text-align: center;
+    outline: none;
+  }
+  &__img {
+    margin: 0 auto;
+  }
+  &__p {
+    margin-top: 30px;
+    color: $color-dark;
+    text-transform: uppercase;
+  }
+}
+
+.cool {
+  padding-bottom: 60px;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    outline: none;
+  }
+  &__img-outer {
+    display: flex;
+    justify-content: flex-end;
+    height: 363px;
+  }
+  &__img {
+    margin: auto auto 0;
+  }
+  &__p {
+    max-width: 300px;
+    margin: 40px auto 0;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+.family {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  text-align: center;
+  background: url(../images/family-min.jpg) left 15% bottom 10% no-repeat;
+  background-size: 250% auto;
+
+  &__p {
+    color: $color-white;
+    font-size: 1.58rem;
+  }
+  &__btn {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    padding: 25px 10px 20px;
+  }
+  &__span {
+    display: block;
+  	font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.users-reviews {
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+.users {
+  
+  &__slide {
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+  &__p {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid $color-gray;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    line-height: 1.1rem;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 45px;
+      bottom: -8px;
+      border: 10px solid transparent;
+      border-color: transparent $color-white $color-white transparent;
+      transform: rotate(-270deg) skew(45deg);
+      box-shadow: 2px 1px 1px 0px $color-gray;
+      z-index: 1;
+    }
+  }
+  &__person {
+    display: flex;
+    margin-top: 40px;
+  }
+  &__img {
+    margin-right: 25px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px $color-gray;
+  }
+  &__name {
+    display: block;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__age {
+    color: $color-dark-gray;
+    font-size: 0.8rem;
+  }
+}
+
+footer {
+  background: 
+            url(../images/ff-left-min.png) left top no-repeat,
+            url(../images/ff-right-min.png) right top no-repeat;
+  background-color: $bg-screen;
+}
+.sign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 0 65px;
+  
+  &__p {
+    margin: 0;
+    color: $color-white;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    max-width: 370px;
+    padding-bottom: 25px;
+  }
+  #mail {
+    width: 370px;
+    margin-bottom: 5px;
+    padding: 25px 30px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  &__btn {
+    display: block;
+    padding: 30px 0 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  &__policy {
+    margin-bottom: 0;
+    color: $color-white;
+    font-size: 0.89rem;
+  }
+  &__a {
+    color: $color-white;
+    text-decoration: underline;
+  }
+}
+.copyright {
+  padding: 10px;
+    color: $color-white;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+  /* ### MEDIA ### */
+
+@media (max-width: 420px) {
+  h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .header {
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  .cool {
+    &__img-outer {
+      height: auto;
+    }
+    &__img {
+      width: 240px;
+    }
+  }
+
+  .sign {
+    #mail {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1019px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background: 
+                url(../images/ff-center-front-min.png) right 31% bottom no-repeat,
+                url(../images/cooker-min.png) right 45% bottom -200px no-repeat,
+                url(../images/ff-center-back-min.png) right 31% bottom no-repeat,
+                url(../images/ff-left-min.png) left top no-repeat,
+                url(../images/ff-right-min.png) right top no-repeat;
+    background-color: $bg-screen;
+    background-size: auto auto, auto 110%, auto auto, auto auto, auto auto;
+    
+    &__logo {
+      align-self: flex-start;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 25px 0 0;
+      line-height: 2rem;
+    }
+    &__p {
+      flex: 1 0 auto;
+      font-size: 1.3rem;
+    }
+    &__btn {
+      margin-top: 350px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: 780px) {
+  .family {
+    background: url(../images/family-min.jpg) center bottom 20% no-repeat;
+
+    &__btn {
+      padding: 25px 60px 20px;
+    }
+  }
+
+  .sign {
+    flex-wrap: no-wrap;
+    padding: 150px 0 190px;
+    
+    &__p {
+      max-width: 50%;
+      padding: 0 20px;
+    }
+    &__form {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 1020px) {
+  .sign {
+    &__p {
+      padding: 0 60px;
+    }
+    &__form {
+      padding: 0 60px;
+    }
+  }
+
+  .users {
+    &__slide {
+      padding: 0 20px 0 50px;
+    }
+  }
+}
